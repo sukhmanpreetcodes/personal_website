@@ -33,19 +33,26 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    flex-wrap: wrap; /* allows nav to move under title */
 }
 
 header h1 {
     font-weight: 700;
     color: #ff69b4;
+    font-size: 1.6rem;
+}
+
+header nav {
+    margin-top: 0.5rem;
 }
 
 header nav a {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     text-decoration: none;
     color: #333;
     font-weight: 600;
     transition: color 0.3s;
+    font-size: 1rem;
 }
 
 header nav a:hover {
@@ -55,18 +62,18 @@ header nav a:hover {
 /* HERO */
 #hero {
     text-align: center;
-    padding: 6rem 2rem;
+    padding: 4rem 1.5rem;
     background: #ffd9e8;
 }
 
 #hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
     color: #ff1493;
 }
 
 #hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
@@ -77,6 +84,7 @@ header nav a:hover {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s;
+    display: inline-block;
 }
 
 .btn {
@@ -100,7 +108,7 @@ header nav a:hover {
 
 /* SECTIONS */
 section {
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 section h2 {
@@ -163,7 +171,7 @@ section h2 {
     background-color: #fff0f5;
     padding: 1rem 1.5rem;
     border-radius: 12px;
-    width: 80%;
+    width: 90%;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -171,7 +179,7 @@ section h2 {
 /* ART GRID */
 .art-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
 }
 
@@ -240,4 +248,71 @@ footer {
     background-color: #ffe6f0;
     color: #ff69b4;
     font-weight: 600;
+}
+
+/* ---------------------------- */
+/*     RESPONSIVE DESIGN        */
+/* ---------------------------- */
+
+/* For screens below 768px */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 0 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .timeline li {
+        width: 100%;
+    }
+
+    .container {
+        padding: 1.5rem 0;
+    }
+}
+
+/* For very small screens (phones under 480px) */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    #hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
 }
