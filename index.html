@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukhmanpreet Kaur | Personal Website</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Sukhmanpreet Kaur is a biology researcher and visual artist working across molecular biology, conservation, and art.">
+    <title>Sukhmanpreet Kaur | Biology Researcher &amp; Artist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +13,7 @@
 <header>
     <div class="container header-container">
         <h1>Sukhmanpreet Kaur</h1>
-        <nav>
+        <nav aria-label="Primary navigation">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
@@ -27,11 +26,19 @@
 <!-- HERO SECTION -->
 <section id="hero">
     <div class="container hero-container">
-        <h2>Hi, I’m Sukhmanpreet</h2>
-        <p>Biology researcher & artist passionate about molecular biology, conservation, and visual arts.</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn">Contact Me</a>
-            <a href="resume.pdf" class="btn-outline" target="_blank">View Resume</a>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Researcher &amp; Artist</span>
+            <h2>Hi, I’m Sukhmanpreet</h2>
+            <p>Biology researcher &amp; artist passionate about molecular biology, conservation, and visual arts.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="resume.pdf" class="btn-outline" target="_blank" rel="noopener">View Resume</a>
+            </div>
+        </div>
+        <div class="profile-photo-wrap">
+            <div class="profile-photo-accent" aria-hidden="true"></div>
+            <img class="profile-photo" src="gallery/sukhman-profile.webp" alt="Portrait of Sukhmanpreet Kaur" width="1318" height="1600">
+            <span class="profile-photo-badge">Biology &bull; Art &bull; Conservation</span>
         </div>
     </div>
 </section>
@@ -150,14 +157,14 @@
         <h2>Contact</h2>
         <p>Email: <a href="mailto:meetsukhmanpreet@gmail.com">meetsukhmanpreet@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://github.com/meetsukhmanpreet" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/sukhmanpreet-kaur/" target="_blank">LinkedIn</a>
-            <a href="resume.pdf" target="_blank">Resume</a>
+            <a href="https://github.com/meetsukhmanpreet" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/sukhmanpreet-kaur/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
         <form action="mailto:meetsukhmanpreet@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" aria-label="Your message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
@@ -165,7 +172,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2025 Sukhmanpreet Kaur | Designed with ❤️</p>
+    <p>&copy; 2026 Sukhmanpreet Kaur</p>
 </footer>
 
 </body>
